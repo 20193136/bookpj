@@ -2,3 +2,4 @@
 .gradle
 .idea
 bookpj.iml
+application-oauth.properties
