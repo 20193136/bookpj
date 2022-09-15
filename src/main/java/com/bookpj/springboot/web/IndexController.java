@@ -1,6 +1,7 @@
 package com.bookpj.springboot.web;
 
 
+import com.bookpj.springboot.config.auth.LoginUser;
 import com.bookpj.springboot.service.posts.PostsService;
 import com.bookpj.springboot.web.dto.PostsResponseDto;
 import com.bookpj.springboot.config.auth.dto.SessionUser;
@@ -20,12 +21,10 @@ public class IndexController {
     private final HttpSession httpSession;
 
     @GetMapping("/")
-    public String index(Model model){
+    public String index(Model model, @LoginUser SessionUser user){
         model.addAttribute("posts",postsService.findAllDesc());
-        SessionUser user =(SessionUser) httpSession.getAttribute("user");
         if(user != null) {
             model.addAttribute("userName", user.getName());
-            System.out.println(model);
         }
         return "index";
     }
