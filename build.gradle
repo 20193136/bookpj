@@ -11,10 +11,6 @@ buildscript {
     }
 }
 
-jar{
-    enabled=false
-}
-
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
@@ -26,6 +22,10 @@ sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
+}
+
+jar{
+    enabled=false
 }
 
 dependencies {
