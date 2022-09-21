@@ -13,6 +13,6 @@ permissions:
 
 hook:
   ApplicationStart:
-    -location: Scripts/deploy.sh
+    - location: Scripts/depl1oy.sh
       timeout: 60
       runas: ec2-user
