@@ -3,7 +3,7 @@
 REPOSITORY=/home/ec2-user/app/step2
 PROJECT_NAME=bookpj
 
-echo "> 빌드 파일 복사"
+echo "> 빌드 파일 복사 "
 
 cp $REPOSITORY/zip/build/libs/*.jar $REPOSITORY
 
